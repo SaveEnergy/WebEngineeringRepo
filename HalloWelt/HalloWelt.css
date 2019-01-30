@@ -1,0 +1,24 @@
+body {
+    width: 600px;
+}
+
+h1 {
+    font-family: Helvetica, serif;
+    color: #2687ed;
+    text-align: center;
+}
+
+.artikel {
+    padding: 5px;
+    margin: 10px 5px 10px;
+    text-align: justify;
+}
+
+#quote {
+    width: 450px;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    background-color: aliceblue;
+    font-family: "Avenir Next", sans-serif;
+}
