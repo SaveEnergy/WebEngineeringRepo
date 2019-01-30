@@ -5,13 +5,28 @@ body
 
 #logo
 {
+	color: white;
+	background-color: black;
+	padding: 5px;
 }
 
 #menu
 {
+	color: white;
+	font-size: 7pt;
+	margin-top: 7px;
+	font-weight: bold;
+	padding: 5px 15px;
+	word-spacing: 7px;
+	background-color: #bcbcbc;
+	text-transform: uppercase;
 }
 #menu a:link,#menu a:visited
 {
+	color: white;
+	font-size: 7pt;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 #menu a:hover
 {
@@ -19,9 +34,13 @@ body
 
 .ueberschrift1
 {
+
 }
 .ueberschrift2
 {
+	font-size: 8pt;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .teasertext
