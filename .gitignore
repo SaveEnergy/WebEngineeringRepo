@@ -79,3 +79,5 @@ typings/
 .idea/
 *.iml
 
+#MacOS
+.DS_Store
