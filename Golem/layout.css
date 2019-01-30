@@ -1,19 +1,20 @@
 body
 {
-	font-family:arial;
+	font-family: arial, sans-serif;
 }
 
 #logo
 {
+	font-size: 18pt;
 	color: white;
 	background-color: black;
-	padding: 5px;
+	padding: 5px 10px;
 }
 
 #menu
 {
 	color: white;
-	font-size: 7pt;
+	font-size: 8pt;
 	margin-top: 7px;
 	font-weight: bold;
 	padding: 5px 15px;
@@ -24,54 +25,89 @@ body
 #menu a:link,#menu a:visited
 {
 	color: white;
-	font-size: 7pt;
+	font-size: 8pt;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 #menu a:hover
 {
+	text-decoration: underline;
 }
 
 .ueberschrift1
 {
-
+	font-size: 26px;
+	color: #222222;
+	padding: 5px 2px;
 }
 .ueberschrift2
 {
-	font-size: 8pt;
+	margin-top: 10px;
+	font-size: 9pt;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
+#textimage {
+	float: left;
+	margin-right: 5px;
+}
+
 .teasertext
 {
+	width: 650px;
+	padding: 5px 2px;
+	font-size: 18px;
 }
 .artikeltext
 {
+	width: 650px;
+	padding: 5px 2px;
+	font-size: 16px;
+	margin-bottom: 25px;
 }
 
 #kommentar
 {
+	width: 650px;
+	border: 1px #888888 solid;
+	border-radius: 5px;
+	box-shadow: #888888;
+	background-color: #f9f9f9;
+	padding: 8px;
 }
 #kommentar h1
 {
+	font-size: 18px;
+	margin: 5px;
 }
 #kommentar div
 {
+	font-size: 12pt;
+	margin: 5px;
 }
 
 #verwandtbox
 {
+	margin-top: 5px;
+	border-top: 1px black solid;
+	border-bottom: 1px black solid;
 }
 #verwandtbox h1
 {
+	font-size: 18px;
 }
 #verwandtbox h2
 {
+	font-size: 14px;
 }
 #verwandtbox a:link,#verwandtbox a:visited
 {
+	text-decoration: none;
+	color: #000000;
 }
 #verwandtbox div
 {
+	font-size: 12px;
+	margin-bottom: 10px;
 }
