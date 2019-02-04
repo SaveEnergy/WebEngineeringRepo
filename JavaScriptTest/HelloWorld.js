@@ -21,7 +21,7 @@ function init() {
     document.getElementById('source').innerHTML = '<div ' +
         ' id = "content"></div>';
     document.getElementById('content').innerHTML = '<h1 ' +
-        ' id="headline">JS Testseite</h1>';
+        ' id="headline">JS Testseite 2</h1>';
 
     onMouseOver('headline');
 
