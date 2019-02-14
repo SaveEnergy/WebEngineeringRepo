@@ -1,0 +1,18 @@
+h1 {
+	font-size:19pt;
+	text-shadow: 3px 2px red;
+}
+
+h2 {
+	font-size:17pt;
+}
+
+h3 {
+	font-size:15pt;
+}
+
+.central {
+	width: 400px;
+	align-content: center;
+	text-align: center;
+}

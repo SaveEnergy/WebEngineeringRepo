@@ -1,0 +1,118 @@
+body
+{
+	font-family:arial;
+}
+
+#logo
+{
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#menu
+{
+	background-color: #888888;
+	padding: 5px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+}
+#menu a:link,#menu a:visited
+{
+	color: white;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#menu a:hover
+{
+	text-decoration: underline;
+}
+
+.ueberschrift2
+{
+	color: #222222;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.ueberschrift1
+{
+	color: #222222;
+	font-size: 26px;
+}
+.teasertext
+{
+	font-size:18px;
+	margin-bottom:10px;
+	line-height:150%;
+	width:650px;
+}
+.artikeltext
+{
+	font-size: 16px;
+	text-align: justify;
+	width: 650px;
+}
+
+#kommentar
+{
+	margin-top: 10px;
+	padding: 10px;
+	width: 650px;
+	background-color: #F9F9F9;
+	border-color: #888888;
+	border-style: solid;
+	border-width: 1px;
+}
+#kommentar h1
+{
+	font-size: 18px;
+	margin-top: 5px;
+}
+#kommentar div
+{
+	font-size: 14px;
+}
+
+#verwandtbox
+{
+	margin-top: 10px;
+	padding: 10px;
+	width: 650px;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+}
+#verwandtbox h1
+{
+	margin-top: 10px;
+	font-size: 14px;
+	color: #888888;
+}
+#verwandtbox h2
+{
+	margin-top: 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+#verwandtbox a:link,#verwandtbox a:visited
+{
+	text-decoration: none;
+	color: #222222;
+}
+#verwandtbox div
+{
+	margin-top: 0px;
+	font-size: 14px;
+}
+#artikelbild
+{
+	margin-right: 5px;
+	float:left;
+}
