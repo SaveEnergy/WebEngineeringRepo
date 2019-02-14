@@ -1,4 +1,3 @@
-
 document.getElementById("btnBerechnung").addEventListener("click", berechnePreis);
 document.bestellung.anzahl.addEventListener("input", berechnePreis);
 document.bestellung.waehrung.addEventListener("change", berechnePreis);
@@ -6,6 +5,11 @@ berechnePreis();
 
 function berechnePreis() {
     let anzahl = document.bestellung.anzahl.value;
+
+    if (anzahl < 0) {
+        anzahl = 0;
+    }
+
     let summe = anzahl * 999;
 
     if (document.bestellung.waehrung.value === "chf") {
