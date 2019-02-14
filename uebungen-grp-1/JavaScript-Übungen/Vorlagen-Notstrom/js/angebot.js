@@ -46,7 +46,7 @@ function init()
     function turn()
     {
 
-        if (imgTurn.getAttribute('src') == 'img/notstromaggregat.jpg')
+        if (imgTurn.getAttribute('src') === 'img/notstromaggregat.jpg')
         {
             imgTurn.setAttribute('src',"img/notstromaggregat-rueckseite.jpg");
         }
@@ -65,7 +65,7 @@ function init()
     function verschiebeKreis(top, left, id)
     {
 
-        if (document.getElementById(id).style.opacity != '0.3')
+        if (document.getElementById(id).style.opacity !== '0.3')
         {
             kreis.style.visibility = 'visible';
             kreis.style.top = top;
@@ -147,13 +147,13 @@ function init()
     }
 
     setTimeout(zeigeMeldung, 1000);
-    addEventListener("resize", zeigeMeldung)
+    addEventListener("resize", zeigeMeldung);
     document.getElementById('close').addEventListener('click', function () {
         schliesseMeldung();
-    })
+    });
     document.getElementById('closebutton').addEventListener('click', function () {
         schliesseMeldung();
-    })
+    });
 
 }
 
