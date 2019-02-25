@@ -36,10 +36,25 @@ function foolproof() {
 
     if (document.bestellung.plz.value.length === 0) {
         document.bestellung.plz.style.borderColor = "red";
-        error += "Bitte das Feld Postleitzahl ausfüllen\n";
+        error += "Bitte eine Postleitzahl eingeben\n";
     }
 
-    if (error.length !== 0) {
+    if (document.bestellung.vorname.value.length === 0) {
+        document.bestellung.vorname.style.borderColor = "red";
+        error += "Bitte eine Vornamen eingeben\n";
+    }
+
+    if (document.bestellung.nachname.value.length === 0) {
+        document.bestellung.nachname.style.borderColor = "red";
+        error += "Bitte eine Nachnamen eingeben\n";
+    }
+
+    if (!document.bestellung.agb.value.checked) {
+        document.bestellung.agb.style.color = "red";
+        error += "Bitte stimmen Sie unseren AGBs zu\n";
+    }
+
+    if (error.length === "") {
         alert(error);
         return false;
     }
