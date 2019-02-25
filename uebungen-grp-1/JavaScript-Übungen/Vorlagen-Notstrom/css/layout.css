@@ -91,5 +91,8 @@ table#produktliste {
     text-align: center;
     background-color: #fbfaf6;
 }
-		
-	
+
+.firmendaten {
+    text-align: left;
+    width: 100%;
+}

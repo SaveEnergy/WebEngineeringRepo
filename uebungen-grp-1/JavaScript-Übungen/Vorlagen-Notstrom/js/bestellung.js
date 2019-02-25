@@ -20,3 +20,29 @@ function berechnePreis() {
 
     document.getElementById("summe").innerHTML = summe.toFixed(2);
 }
+
+function foolproof() {
+    let error = "";
+
+    if (document.bestellung.name.value.length === 0) {
+        document.bestellung.name.style.borderColor = "red";
+        error += "Bitte das Feld Firmenname ausfüllen\n";
+    }
+
+    if (document.bestellung.str.value.length === 0) {
+        document.bestellung.str.style.borderColor = "red";
+        error += "Bitte das Feld Straße ausfüllen\n";
+    }
+
+    if (document.bestellung.plz.value.length === 0) {
+        document.bestellung.plz.style.borderColor = "red";
+        error += "Bitte das Feld Postleitzahl ausfüllen\n";
+    }
+
+    if (error.length !== 0) {
+        alert(error);
+        return false;
+    }
+
+    return true;
+}

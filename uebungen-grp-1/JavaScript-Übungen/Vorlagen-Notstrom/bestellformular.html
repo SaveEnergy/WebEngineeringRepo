@@ -18,9 +18,7 @@
 
     <hr/>
 
-    <h2 class="angebot">Bestellformular Notstromanlage X2345+</h2>
-
-    <form name="bestellung">
+    <form name="bestellung" onsubmit="foolproof()">
         <p>Bestellung von <input type="text" name="anzahl" id="anzahl" value="1" maxlength="3"> Geräte zum
             Preis von 999 Euro!</p>
         <p>Summe <strong id="summe">0</strong>
@@ -31,7 +29,28 @@
             </select>
             <button type="button" id="btnBerechnung">Preis Berechnen</button>
         </p>
+
+        <p class="firmendaten">
+            Firmenname: <br/>
+            <input class="firmendaten" type="text" name="name">
+        </p>
+
+        <p class="firmendaten">
+            Straße: <br/>
+            <input class="firmendaten" type="text" name="str">
+        </p>
+
+        <p class="firmendaten">
+            PLZ: <br/>
+            <input class="firmendaten" type="text" name="plz">
+        </p>
+
+        <p>
+            <button>kostenpflichtig bestellen</button>
+        </p>
     </form>
+
+    <h2 class="angebot">Bestellformular Notstromanlage X2345+</h2>
 
     <hr>
 
