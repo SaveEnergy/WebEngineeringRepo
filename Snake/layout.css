@@ -2,7 +2,7 @@
     width: 300px;
     text-align: center;
     text-transform: uppercase;
-    font-family: sans-serif;
+    font-family: serif;
     font-size: x-large;
     font-weight: bold;
 
@@ -13,18 +13,26 @@
 }
 
 #points {
-    width: 300px;
+    width: 290px;
+    height: 10px;
+    padding: 5px;
+    color: greenyellow;
+    background-color: black;
     text-transform: uppercase;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 7pt;
-    font-weight: bold;
     position: relative;
-    top: -160px;
-    left: 160px;
+    top: -165px;
+    left: 165px;
     transform: rotate(90deg);
 }
 
 #controls {
+    width: 300px;
+    text-align: center;
+}
+
+#startButton {
     width: 300px;
     text-align: center;
 }

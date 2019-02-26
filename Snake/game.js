@@ -1,8 +1,16 @@
-document.getElementById("start").addEventListener("click", startGame);
-document.getElementById("left").addEventListener("click", directionLeft);
-document.getElementById("right").addEventListener("click", directionRight);
+let start = document.getElementById("start");
+let left = document.getElementById("left");
+let right = document.getElementById("right");
 
-canvas = document.getElementById("game").getContext("2d");
+start.addEventListener("click", startGame);
+left.addEventListener("click", directionLeft);
+right.addEventListener("click", directionRight);
+
+start.disabled = false;
+left.disabled = true;
+right.disabled = true;
+
+let canvas = document.getElementById("game").getContext("2d");
 
 let x = 150;
 let y = 150;
@@ -11,6 +19,10 @@ let points = 0;
 let direction = "down";
 
 function startGame() {
+
+    start.disabled = true;
+    left.disabled = false;
+    right.disabled = false;
 
     canvas.lineJoin = "miter";
     canvas.lineWidth = 5;
