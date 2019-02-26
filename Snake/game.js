@@ -18,7 +18,7 @@ function startGame() {
     canvas.beginPath();
     canvas.moveTo(x, y);
 
-    interval = setInterval(gameLogic, 300);
+    interval = setInterval(gameLogic, 250);
 }
 
 function directionLeft() {
@@ -60,14 +60,32 @@ function directionRight() {
 }
 
 function gameRules() {
-    let color = canvas.getImageData(x, y,5,5).data[3];
 
-    console.log(color);
+    let color;
 
-    if (x >= 300 || x <= 0 || y >= 300 || y <= 0) {
+    switch (direction) {
+        case "down":
+            color = canvas.getImageData(x, y, 5, 5).data[3];
+            break;
+        case "up":
+            color = canvas.getImageData(x, y - 2, 5, 5).data[3];
+            break;
+        case "right":
+            color = canvas.getImageData(x, y, 5, 5).data[3];
+            break;
+        case "left":
+            color = canvas.getImageData(x - 2, y, 5, 5).data[3];
+            break;
+        default:
+            alert("Something went Wrong");
+    }
+
+    if (x >= 300 || x <= 0 || y >= 300 || y <= 0 || color === 255) {
         clearInterval(interval);
-        alert("Game Over");
-        //location.reload();
+        alert("Game Over\n You earned " + points + "!");
+        location.reload();
+    } else {
+        document.getElementById("points").innerText = "Points: " + ++points;
     }
 }
 
@@ -91,10 +109,6 @@ function gameLogic() {
 
     canvas.lineTo(x, y);
     canvas.stroke();
-
-    console.log(x, y);
-
-    document.getElementById("points").innerText = "Points: " + points++;
 
     gameRules();
 }
