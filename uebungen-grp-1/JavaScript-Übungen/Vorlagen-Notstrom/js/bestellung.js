@@ -1,7 +1,15 @@
 document.getElementById("btnBerechnung").addEventListener("click", berechnePreis);
 document.bestellung.anzahl.addEventListener("input", berechnePreis);
 document.bestellung.waehrung.addEventListener("change", berechnePreis);
+document.bestellung.info.addEventListener("click", infoLink);
 berechnePreis();
+
+document.getElementById("rechnung-ide").addEventListener("click", function () {
+    document.getElementById("rechnung").style.visibility = hidden;
+});
+document.getElementById("rechnung-abw").addEventListener("click", function () {
+    document.getElementById("rechnung").style.visibility = visible;
+});
 
 function berechnePreis() {
     let anzahl = document.bestellung.anzahl.value;
@@ -22,6 +30,7 @@ function berechnePreis() {
 }
 
 function foolproof() {
+
     let error = "";
 
     if (document.bestellung.name.value.length === 0) {
@@ -49,15 +58,27 @@ function foolproof() {
         error += "Bitte eine Nachnamen eingeben\n";
     }
 
-    if (!document.bestellung.agb.value.checked) {
-        document.bestellung.agb.style.color = "red";
+    if (!document.bestellung.agb.checked) {
+        document.getElementById("agb-text").style.color = "red";
         error += "Bitte stimmen Sie unseren AGBs zu\n";
     }
 
-    if (error.length === "") {
+    if (error !== "") {
         alert(error);
         return false;
     }
 
     return true;
+}
+
+function infoLink() {
+    if (document.bestellung.lieferung.value === "dhl") {
+        window.open("https://www.dhl.de", "_blank", "width = 500, height = 500");
+    }
+    if (document.bestellung.lieferung.value === "ups") {
+        window.open("https://www.ups.com", "_blank", "width = 500, height = 500");
+    }
+    if (document.bestellung.lieferung.value === "hermes") {
+        window.open("https://www.myhermes.de", "_blank", "width = 500, height = 500");
+    }
 }

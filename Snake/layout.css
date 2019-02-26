@@ -1,0 +1,30 @@
+#title {
+    width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+#game {
+    border: solid 1px black;
+}
+
+#points {
+    width: 300px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 7pt;
+    font-weight: bold;
+    position: relative;
+    top: -160px;
+    left: 160px;
+    transform: rotate(90deg);
+}
+
+#controls {
+    width: 300px;
+    text-align: center;
+}

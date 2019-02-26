@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+    <h1>Test</h1>
+
+    <canvas id="canvas" width="300" height="300" style="border: solid 1px black"></canvas>
+
+    <div>Ende</div>
+
+    <script>
+        let canvas = document.getElementById("canvas").getContext("2d");
+
+        /* Rechteck */
+        canvas.fillStyle = "rgb(200, 0, 0)";
+        let x = Math.floor((Math.random() * 100) + 1);
+        canvas.fillRect(30, 0, 35, x);
+
+        /* Kreis */
+        canvas.fillStyle = "rgb(0, 100, 0)";
+        canvas.arc(120, 75, 30, 0, 2 * Math.PI, true);
+        canvas.fill();
+
+        /* Farbverlauf */
+        let lingard = canvas.createLinearGradient(0, 0, 0, 150);
+        lingard.addColorStop(0.0, "green");
+        lingard.addColorStop(0.5, "yellow");
+        lingard.addColorStop(1.0, "red");
+        canvas.fillStyle = lingard;
+        canvas.fillRect(160, 100, 100, 100);
+
+        /* Linien */
+        canvas.lineJoin = "round";
+        canvas.beginPath();
+        canvas.moveTo(10, 210);
+        canvas.lineTo(150, 260);
+        canvas.lineTo(175, 220);
+        canvas.lineTo(275, 280);
+        canvas.stroke();
+
+    </script>
+</body>
+</html>

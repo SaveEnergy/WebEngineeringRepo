@@ -18,7 +18,7 @@
 
     <hr/>
 
-    <form name="bestellung" onsubmit="foolproof()">
+    <form name="bestellung" onsubmit="return foolproof()">
         <p>Bestellung von <input type="text" name="anzahl" id="anzahl" value="1" maxlength="3"> Geräte zum
             Preis von 999 Euro!</p>
         <p>Summe <strong id="summe">0</strong>
@@ -48,6 +48,7 @@
         <p class="firmendaten">
             Frau <input type="radio" name="anrede"/>
             Herr <input type="radio" name="anrede"/>
+            Divers <input type="radio" name="anrede"/>
         </p>
 
         <p class="firmendaten">
@@ -60,15 +61,47 @@
             <input class="firmendaten" type="text" name="nachname"/>
         </p>
 
-        <p class="firmendaten">
-            <input class="firmendaten" type="checkbox" name="agb"/>
-            Hiermit stimmen Sie unseren AGBs zu!
+        <p class="firmendaten" id="agb-text">
+            Hiermit stimmen Sie unseren AGBs zu! <input type="checkbox" name="agb"/>
         </p>
+
+        <p class="bestellung">
+            Lieferung Durch:
+            <select name="lieferung">
+                <option value="dhl">DHL</option>
+                <option value="ups">UPS</option>
+                <option value="hermes">Hermes</option>
+            </select>
+            <button type="button" name="info" id="info">Info</button>
+        </p>
+
+        <p class="firmendaten">
+           Rechungsadresse ist identisch <input type="radio" name="rechnung" id="rechnung-ide" checked="checked"/>
+           abweichende Rechnugsadresse <input type="radio" name="rechnung" id="rechnung-abw"/>
+        </p>
+
+        <div id="rechnung">
+            <p class="firmendaten">
+                Firmenname: <br/>
+                <input class="firmendaten" type="text" name="name"/>
+            </p>
+
+            <p class="firmendaten">
+                Straße: <br/>
+                <input class="firmendaten" type="text" name="str"/>
+            </p>
+
+            <p class="firmendaten">
+                PLZ: <br/>
+                <input class="firmendaten" type="text" name="plz"/>
+            </p>
+        </div>
 
         <p>
             <button>kostenpflichtig bestellen</button>
         </p>
     </form>
+
 
     <h2 class="angebot">Bestellformular Notstromanlage X2345+</h2>
 

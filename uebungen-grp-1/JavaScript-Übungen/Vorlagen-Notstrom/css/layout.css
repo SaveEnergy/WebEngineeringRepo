@@ -96,3 +96,12 @@ table#produktliste {
     text-align: left;
     width: 100%;
 }
+
+.bestellung {
+    text-align: right;
+}
+
+#rechnung {
+    visibility: hidden;
+    border: #888888;
+}
