@@ -2,13 +2,12 @@ document.getElementById("start").addEventListener("click", startGame);
 document.getElementById("left").addEventListener("click", directionLeft);
 document.getElementById("right").addEventListener("click", directionRight);
 
-
 canvas = document.getElementById("game").getContext("2d");
 
-let points = 0;
 let x = 150;
 let y = 150;
 let interval;
+let points = 0;
 let direction = "down";
 
 function startGame() {
@@ -80,7 +79,7 @@ function gameRules() {
             alert("Something went Wrong");
     }
 
-    if (x >= 300 || x <= 0 || y >= 300 || y <= 0 || color === 255) {
+    if (x > 300 || x < 0 || y > 300 || y < 0 || color === 255) {
         clearInterval(interval);
         alert("Game Over\n You earned " + points + "!");
         location.reload();
