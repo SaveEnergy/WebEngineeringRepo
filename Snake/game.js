@@ -1,6 +1,7 @@
 let start = document.getElementById("start");
 let left = document.getElementById("left");
 let right = document.getElementById("right");
+let gameOver = document.getElementById("gameOver");
 
 start.addEventListener("click", startGame);
 left.addEventListener("click", directionLeft);
@@ -8,13 +9,16 @@ right.addEventListener("click", directionRight);
 
 let canvas = document.getElementById("game").getContext("2d");
 
-let x = 150;
-let y = 150;
+let x;
+let y;
 let interval;
 let points = 0;
 let direction = "down";
 
 function startGame() {
+
+    x = 150;
+    y = 150;
 
     start.disabled = true;
     left.disabled = false;
@@ -89,20 +93,27 @@ function gameRules() {
 
     if (x > 300 || x < 0 || y > 300 || y < 0 || color === 255) {
         clearInterval(interval);
+        interval = null;
 
         left.disabled = true;
         right.disabled = true;
 
-        let gameOver = document.getElementById("gameOver");
         gameOver.style.display = "inline-block";
         gameOver.innerHTML = "<p>Game Over<br/>You earned " + points + " Points!</p>";
 
         start.innerText = "Neues Spiel";
-        start.setAttribute("onClick", "window.location.reload()");
         start.disabled = false;
+        start.addEventListener("click", refresh);
     } else {
         document.getElementById("points").innerText = "Points: " + ++points;
     }
+}
+
+function refresh() {
+    canvas.clearRect(0, 0, canvas.canvas.width, canvas.canvas.height);
+    start.innerText = "Spiel Starten";
+    gameOver.style.display = "none";
+    startGame();
 }
 
 function gameLogic() {
