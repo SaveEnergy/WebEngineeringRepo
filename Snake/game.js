@@ -6,10 +6,6 @@ start.addEventListener("click", startGame);
 left.addEventListener("click", directionLeft);
 right.addEventListener("click", directionRight);
 
-start.disabled = false;
-left.disabled = true;
-right.disabled = true;
-
 let canvas = document.getElementById("game").getContext("2d");
 
 let x = 150;
@@ -93,8 +89,17 @@ function gameRules() {
 
     if (x > 300 || x < 0 || y > 300 || y < 0 || color === 255) {
         clearInterval(interval);
-        alert("Game Over\n You earned " + points + "!");
-        location.reload();
+
+        left.disabled = true;
+        right.disabled = true;
+
+        let gameOver = document.getElementById("gameOver");
+        gameOver.style.display = "inline-block";
+        gameOver.innerHTML = "<p>Game Over<br/>You earned " + points + " Points!</p>";
+
+        start.innerText = "Neues Spiel";
+        start.setAttribute("onClick", "window.location.reload()");
+        start.disabled = false;
     } else {
         document.getElementById("points").innerText = "Points: " + ++points;
     }

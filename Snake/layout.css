@@ -22,7 +22,7 @@
     font-family: Helvetica, sans-serif;
     font-size: 7pt;
     position: relative;
-    top: -165px;
+    top: -257px;
     left: 165px;
     transform: rotate(90deg);
 }
@@ -32,7 +32,36 @@
     text-align: center;
 }
 
+button {
+    width: 120px;
+    height: 40px;
+}
+
 #startButton {
     width: 300px;
+    margin-top: 12px;
     text-align: center;
+}
+
+#gameOver {
+    display: none;
+    width: 200px;
+    height: 100px;
+    font-size: small;
+    font-family: Verdana, sans-serif;
+    color: white;
+    position: absolute;
+    top: 135px;
+    left: 55px;
+    opacity: 0.8;
+    border: solid 1px dimgray;
+    background-color: gray;
+}
+
+#gameOver p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 33px;
 }
