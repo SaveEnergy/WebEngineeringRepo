@@ -1,0 +1,9 @@
+body {
+    padding-top: 5rem;
+}
+
+#canvas {
+    border: solid 1px black;
+    width: 100%;
+    height: auto;
+}
