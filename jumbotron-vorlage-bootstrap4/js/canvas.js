@@ -66,7 +66,6 @@ function gameLogic() {
     kurs.innerText = canvas.canvas.height - y;
     rest.innerText = (canvas.canvas.width - x) / step;
 
-
     if (x >= canvas.canvas.width) {
         clearInterval(interval);
     }
