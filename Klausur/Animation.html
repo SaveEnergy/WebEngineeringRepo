@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annimation</title>
+    <style>
+        h1 {
+            font-family: Helvetica, sans-serif;
+            font-size: x-large;
+            text-align: center;
+        }
+
+        #box {
+            border: solid 1px black;
+            padding: 3px;
+            position: absolute;
+            left: 160px;
+            top: 120px;
+        }
+    </style>
+</head>
+<body>
+<h1>Animation</h1>
+<div id="box">I can slide ¯\_(ツ)_/¯</div>
+
+<script>
+    let box = document.getElementById("box");
+
+    let intervall = setInterval(move, 10);
+
+    let x = 160;
+    let y = 120;
+
+    function move() {
+        console.log("Variabel: " + x);
+        if (x < 600) {
+            x++;
+            box.style.left = x + "px";
+        } else {
+            clearInterval(intervall);
+            box.style.visibility = "hidden";
+            console.log("intervall");
+        }
+    }
+</script>
+</body>
+</html>
